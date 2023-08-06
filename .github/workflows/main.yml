@@ -25,7 +25,7 @@ jobs:
         with:
           file: ./Dockerfile
           push: true
-          tags: wildan121/test:${{github.sha}}
+          tags: wildan121/portofolio:${{github.sha}}
 
   deployment:
     needs: build

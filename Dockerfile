@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN sudo npm i -g yarn
+RUN yarn install
 
 ENV NODE_ENV production
 ENV PORT 3000

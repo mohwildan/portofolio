@@ -46,6 +46,7 @@ jobs:
             cd ~/app/portofolio && git switch prod
             git pull 
             docker compose down
+            docker image prune -f
             docker compose create 
             docker compose start
 

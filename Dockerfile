@@ -1,4 +1,4 @@
-FROM node:18-alpine
+FROM node:16.19.0-buster as builder
 
 WORKDIR /app
 

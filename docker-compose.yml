@@ -2,6 +2,11 @@ version: "3.8"
 services:
   portofoli_service:
     container_name: portofoli_service
-    image: "wildan121/portofolio:${IMAGE_TAG}"
+    image: "wildan121/portofolio:latest"
     ports:
       - "3000:3000"
+  redis:
+    container_name: redis_container
+    image: 'redis:alpine'
+    ports:
+      - '6379:6379'

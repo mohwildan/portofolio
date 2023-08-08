@@ -25,7 +25,7 @@ jobs:
         with:
           file: ./Dockerfile
           push: true
-          tags: wildan121/portofolio:${{github.sha}}
+          tags: wildan121/portofolio:latest
 
   deployment:
     needs: build
@@ -46,7 +46,7 @@ jobs:
             cd ~/app/portofolio && git switch prod
             git pull 
             docker compose down
-            docker rmi wildan121/portofolio
+            docker rmi wildan121/portofolio:latest
             docker compose create 
             docker compose start
             docker image prune -f
